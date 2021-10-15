@@ -1,5 +1,5 @@
 * {
-    border: 2px solid mediumseagreen;
+/*    border: 2px solid mediumseagreen; */
     padding: 0;
     margin: 0;
 }
@@ -15,7 +15,11 @@ a:hover {
 
 li {
     list-style-type: none;
-    font-size: smaller;
+    font-size: 0.9rem;
+}
+
+li:hover {
+    text-decoration: underline;
 }
 
 body {
@@ -76,6 +80,7 @@ main form {
 
 .search-bar {
     width: 65vw;
+    max-width: 600px;
     height: 2.7rem;
     margin: 2rem;
     border: lightgray 1px solid;
@@ -98,6 +103,7 @@ main form {
     padding: 10px;
     flex: 2;
     margin-right: 15px;
+    font-size: 1rem;
 }
 #search-field:focus {
     outline: none;
@@ -140,6 +146,7 @@ footer {
     padding: 0 1.8rem;
     border-bottom: 1px rgba(112, 128, 144, 0.3) solid;
 }
+
 .bottom {
     width: 100%;
     height: 50%;
@@ -168,8 +175,4 @@ footer {
 .bottom-left li, .bottom-right li {
     padding: 0 1.5rem;
     flex: none;
-}
-
-#how-search-works {
-
 }
