@@ -154,15 +154,14 @@ footer {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    /* margin: 0 5rem; */
 }
 
 .bottom-left {
-    flex: 2;
+    flex: 1 1 auto;
 }
 .bottom-right {
     margin-left: auto;
-    flex: 3;
+    flex: 1 3 auto;
 }
 
 .bottom-left, .bottom-right {
@@ -171,19 +170,45 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    padding: 0 1.5rem;
 }
 
 .bottom-left li, .bottom-right li {
     flex: none;
+
 }
 
 #mobi-all,
 #mobi-images,
-#mobi-about {
+#mobi-about,
+#mobi-menu {
     display: none;
 }
 
-/* Media query for mobile devices */
+/* Media query to make footer two lines,
+using the breakpoint on Google's live site */
+@media screen and (max-width: 600px) {
+    footer {
+        height: 8rem;
+      }
+  
+      .bottom {
+          height: 60%;
+          flex-flow: column nowrap;
+          margin: 1rem 0;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+      }
+
+      .bottom-left,
+      .bottom-right {
+          margin: 0;
+          padding: 0;
+      }
+}
+
+/* Media query for mobile device layout */
 @media screen and (max-width: 500px) {
     body {
         height: 97vh;
@@ -191,7 +216,8 @@ footer {
     
     #mobi-all,
     #mobi-images,
-    #mobi-about {
+    #mobi-about,
+    #mobi-menu {
         display: initial;
     }
 
@@ -225,20 +251,6 @@ footer {
         width: 95vw;
     }
 
-    .bottom {
-        height: 60%;
-        flex-flow: column-reverse nowrap;
-        margin: 1rem 0;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .bottom-left,
-    .bottom-right {
-        margin: 0;
-    }
-
     #settings {
         order: 1;
     }
@@ -251,8 +263,13 @@ footer {
         order: 3;
     }
 
-    footer {
-      height: 8rem;
+    .bottom {
+        height: 60%;
+        flex-flow: column-reverse nowrap;
+        margin: 1rem 0;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 
 }
