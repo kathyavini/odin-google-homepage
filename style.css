@@ -27,8 +27,8 @@ body {
     width: 100vw;
     display: flex;
     flex-flow: column nowrap;
-    font-family: Google Sans, Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
 }
 
 header {
@@ -154,7 +154,7 @@ footer {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    margin: 0 5rem;
+    /* margin: 0 5rem; */
 }
 
 .bottom-left {
@@ -170,9 +170,89 @@ footer {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .bottom-left li, .bottom-right li {
-    padding: 0 1.5rem;
     flex: none;
+}
+
+#mobi-all,
+#mobi-images,
+#mobi-about {
+    display: none;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 500px) {
+    body {
+        height: 97vh;
+    }
+    
+    #mobi-all,
+    #mobi-images,
+    #mobi-about {
+        display: initial;
+    }
+
+    #mobi-all,
+    #mobi-images {
+        color: #6c6c6e;
+        font-size: 0.8rem;
+    }
+
+    #about,
+    #store,
+    #gmail,
+    #images,
+    .search-buttons,
+    #how-search-works {
+        display:none;
+    }
+
+    #applications {
+        margin-left: auto;
+    }
+
+
+    #logo {
+        width: 164px;
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .search-bar {
+        width: 95vw;
+    }
+
+    .bottom {
+        height: 60%;
+        flex-flow: column-reverse nowrap;
+        margin: 1rem 0;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bottom-left,
+    .bottom-right {
+        margin: 0;
+    }
+
+    #settings {
+        order: 1;
+    }
+
+    #privacy {
+        order: 2;
+    }
+
+    #terms {
+        order: 3;
+    }
+
+    footer {
+      height: 8rem;
+    }
+
 }
